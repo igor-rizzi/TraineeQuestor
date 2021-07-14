@@ -10,10 +10,10 @@ int main() {
 	printf("\nVamos começar escolhendo o tipo do seu personagem!\n");
 	printf("\nComo opções temos os seguintes tipos de personagem:\n");
 	printf("1 - Ladrão\n2 - Guerreiro\n3 - Mago\n");
-	int perso;
-	scanf("%d", &perso);
+	int personagem;
+	scanf("%d", &personagem);
 	
-	switch(perso){
+	switch(personagem){
 		case 1: 
 			printf("\nVocê escolheu o personagem ladrão e os seus atributos são:\n");
 			printf("Força: 7\n");
@@ -39,9 +39,48 @@ int main() {
 		break;
 	}
 	
-	char nome[25];
+	int idade;
+	char nome[25], genero[9], next, direcao;
 	printf("\nDigite o nome para o seu personagem:\n");
 	scanf("%s", &nome);
+	printf("\nInforme a idade do seu personagem:\n");
+	scanf("%d", &idade);
+	printf("\nInforme o gênero do seu personagem:\n");
+	scanf("%s", &genero);
+	
+	printf("\nTUDO PRONTO VAMOS COMEÇAR.....\n");
+	printf("\nVocê está aqui no TEMPLO INCIAL!!!");
+	printf("\nDigite qualquer tecla e aperte enter para sair do TEMPLO!\n");
+	scanf("%s", &next);
+	
+	printf("\nVocê chegou no pátio agora tens algumas direção que pode escolher:\n");
+	printf("S - SUL (Vai para o portão do castelo)\n");
+	printf("L - LESTE (Vai para o quarto)\n");
+	printf("O - OESTE (Vai para a cozinha)\n");
+	printf("N - NORTE (Volta para o TEMPLO INICIAL)");
+	scanf("%s", &direcao);
+	
+	switch(direcao){
+		case 'S':
+			printf("Você está indo para portão do castelo!");
+		break;
+		
+		case 'L':
+			printf("Você está indo para o quarto!");
+		break;
+		
+		case 'O': 
+			printf("Você está indo para a cozinha!");
+		break;
+		
+		case 'N':
+			printf("Você está retornando ao TEMPLO!");
+		break
+		default: 
+			printf("Opção inválida!!!");
+		
+	}
+	
 	
 	
 	return 0;
