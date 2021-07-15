@@ -49,42 +49,53 @@ int main() {
 	scanf("%s", &genero);
 	
 	printf("\nTUDO PRONTO VAMOS COMEÇAR.....\n");
-	printf("\nVocê está aqui no TEMPLO INCIAL!!!");
-	printf("\nDigite qualquer tecla e aperte enter para sair do TEMPLO!\n");
-	scanf("%s", &next);
 	
-	printf("\nVocê chegou no pátio agora tens algumas direção que pode escolher:\n");
-	printf("S - SUL (Vai para o portão do castelo)\n");
-	printf("L - LESTE (Vai para o quarto)\n");
-	printf("O - OESTE (Vai para a cozinha)\n");
-	printf("N - NORTE (Volta para o TEMPLO INICIAL)\n");
-	scanf("%s", &direcao);
+	do{
+		printf("\nVocê está aqui no TEMPLO INCIAL!!!");
+		printf("\nDigite qualquer tecla e aperte enter para sair do TEMPLO!\n");
+		scanf("%s", &next);
 	
-
-//	switch(direcao){
-//		case 'S':
-//			printf("Você está no portão do castelo!");
-//		break;
-//		case 'L':
-//			printf("Você está no quarto!\n");
-//		break;
-//		case 'O': 
-//			printf("Você está na cozinha!");		
-//		break;
-//		case 'N':
-//			printf("Você retornou ao TEMPLO!");
-//		break;
-//		default: 
-//			printf("Opção inválida!!!");
-//		break;
-//	}
-	
-	if(direcao == 'L'){
-		printf("Observe que este quarto possui, uma cama, um armário, um baú, uma janela com vista para o pátio e um espelho!\n");
-		printf("Dentro do baú e do armário, existem itens que você pode pegar!!\n");
+		printf("\nVocê chegou no pátio agora tens algumas direção que pode escolher:\n");
+		printf("S - SUL (Vai para o portão do castelo)\n");
+		printf("L - LESTE (Vai para o quarto)\n");
+		printf("O - OESTE (Vai para a cozinha)\n");
+		printf("N - NORTE (Volta para o TEMPLO INICIAL)\n");
+		scanf("%s", &direcao);
 		
-	}
-	
+		
+		//	switch(direcao){
+		//		case 'S':
+		//			printf("Você está no portão do castelo!");
+		//		break;
+		//		case 'L':
+		//			printf("Você está no quarto!\n");
+		//		break;
+		//		case 'O': 
+		//			printf("Você está na cozinha!");		
+		//		break;
+		//		case 'N':
+		//			printf("Você retornou ao TEMPLO!");
+		//		break;
+		//		default: 
+		//			printf("Opção inválida!!!");
+		//		break;
+		//	}
+		
+		if(direcao == 'L'){
+			printf("\nEntrando no quarto....\n");
+			printf("\nObserve que este quarto possui, uma cama, um armário, um baú, uma janela com vista para o pátio e um espelho!\n");
+			printf("Dentro do baú e do armário, existem itens que você pode pegar!!\n");
+		} else if (direcao == 'O'){
+			printf("\nEntrando na cozinha....\n");
+			printf("\nNeste ambiente você pode pegar alimentos e armas brancas!");
+			printf("\nObserve que neste ambiente existem, uma pia, uma mesa de jantar, uma janela com vista para o pantano, uma geladeira e um fogão!");
+		} else if (direcao == 'S'){
+			printf("\nIndo para o portão....\n");
+			printf("\nVocê está saindo do castelo, pode escolher qual direção vai pegar:\n");
+		} else if(direcao == 'N'){
+			printf("\nVOLTANDO PARA O TEMPLO INICIAL....\n");
+		}
+	} while(direcao == 'N');
 		
 	
 	return 0;
