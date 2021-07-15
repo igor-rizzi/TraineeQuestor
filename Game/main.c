@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 
-
 int main() {
 	setlocale(LC_ALL,"Portuguese");
 	
@@ -44,7 +43,7 @@ int main() {
 	printf("\nDigite o nome para o seu personagem:\n");
 	scanf("%s", &nome);
 	printf("\nInforme a idade do seu personagem:\n");
-	scanf("%d", &idade);
+	scanf("%d", &idade);	
 	printf("\nInforme o gênero do seu personagem:\n");
 	scanf("%s", &genero);
 	
