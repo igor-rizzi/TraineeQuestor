@@ -39,29 +39,29 @@ int main() {
 	}
 	
 	int idade;
-	char nome[25], genero[9], next, direcao;
+	char nome[25], genero[9], next, direcao, sair;
 	printf("\nDigite o nome para o seu personagem:\n");
 	scanf("%s", &nome);
 	printf("\nInforme a idade do seu personagem:\n");
 	scanf("%d", &idade);	
 	printf("\nInforme o gênero do seu personagem:\n");
 	scanf("%s", &genero);
-	
+
 	printf("\nTUDO PRONTO VAMOS COMEÇAR.....\n");
 	
 	do{
 		printf("\nVocê está aqui no TEMPLO INCIAL!!!");
 		printf("\nDigite qualquer tecla e aperte enter para sair do TEMPLO!\n");
 		scanf("%s", &next);
-	
+		
 		printf("\nVocê chegou no pátio agora tens algumas direção que pode escolher:\n");
 		printf("S - SUL (Vai para o portão do castelo)\n");
 		printf("L - LESTE (Vai para o quarto)\n");
 		printf("O - OESTE (Vai para a cozinha)\n");
 		printf("N - NORTE (Volta para o TEMPLO INICIAL)\n");
 		scanf("%s", &direcao);
-		
-		
+			
+			
 		//	switch(direcao){
 		//		case 'S':
 		//			printf("Você está no portão do castelo!");
@@ -84,10 +84,13 @@ int main() {
 			printf("\nEntrando no quarto....\n");
 			printf("\nObserve que este quarto possui, uma cama, um armário, um baú, uma janela com vista para o pátio e um espelho!\n");
 			printf("Dentro do baú e do armário, existem itens que você pode pegar!!\n");
+			printf("Você quer sair do quarto?\n");
+			scanf("%s", sair);
 		} else if (direcao == 'O'){
 			printf("\nEntrando na cozinha....\n");
 			printf("\nNeste ambiente você pode pegar alimentos e armas brancas!");
 			printf("\nObserve que neste ambiente existem, uma pia, uma mesa de jantar, uma janela com vista para o pantano, uma geladeira e um fogão!");
+			
 		} else if (direcao == 'S'){
 			printf("\nIndo para o portão....\n");
 			printf("\nVocê está saindo do castelo, pode escolher qual direção vai pegar:\n");
