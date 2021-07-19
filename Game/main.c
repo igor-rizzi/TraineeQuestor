@@ -84,11 +84,11 @@ int main() {
 			printf("\nEntrando no quarto....\n");
 			printf("\nObserve que este quarto possui, uma cama, um armário, um baú, uma janela com vista para o pátio e um espelho!\n");
 			printf("Dentro do baú e do armário, existem itens que você pode pegar!!\n");
-			printf("No baú há uma faca, quer pega-la? S/N\n");
+			printf("No baú há um escudo, quer pega-la? S/N\n");
 			scanf("%s", &pega);
 			if(pega == 'S'){
 				for(inventario[i]; i = 'faca'; i++){
-					printf("Faca foi adicionada ao seu inventário!\n");
+					printf("O escudo foi adicionada ao seu inventário!\n");
 					break;
 				}
 				printf("O seu inventário é constituido por: %s", inventario);
