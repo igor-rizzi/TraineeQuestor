@@ -39,7 +39,7 @@ int main() {
 	}
 	
 	int idade;
-	char nome[25], genero[9], next, direcao, sair;
+	char nome[25], genero[9], next, direcao, sair, inventario[25]; 
 	printf("\nDigite o nome para o seu personagem:\n");
 	scanf("%s", &nome);
 	printf("\nInforme a idade do seu personagem:\n");
@@ -59,33 +59,41 @@ int main() {
 		printf("L - LESTE (Vai para o quarto)\n");
 		printf("O - OESTE (Vai para a cozinha)\n");
 		printf("N - NORTE (Volta para o TEMPLO INICIAL)\n");
-		scanf("%s", &direcao);
+		scanf("%s", &direcao);			
 			
-			
-		//	switch(direcao){
-		//		case 'S':
-		//			printf("Você está no portão do castelo!");
-		//		break;
-		//		case 'L':
-		//			printf("Você está no quarto!\n");
-		//		break;
-		//		case 'O': 
-		//			printf("Você está na cozinha!");		
-		//		break;
-		//		case 'N':
-		//			printf("Você retornou ao TEMPLO!");
-		//		break;
-		//		default: 
-		//			printf("Opção inválida!!!");
-		//		break;
-		//	}
-		
+		//		switch(direcao){
+		//			case 'S':
+		//				printf("Você está no portão do castelo!");
+		//			break;
+		//			case 'L':
+		//				printf("Você está no quarto!\n");
+		//			break;
+		//			case 'O': 
+		//				printf("Você está na cozinha!");		
+		//			break;
+		//			case 'N':
+		//				printf("Você retornou ao TEMPLO!");
+		//			break;
+		//			default: 
+		//				printf("Opção inválida!!!");
+		//			break;
+		//			}
+		char pega;
+		int i;
 		if(direcao == 'L'){
 			printf("\nEntrando no quarto....\n");
 			printf("\nObserve que este quarto possui, uma cama, um armário, um baú, uma janela com vista para o pátio e um espelho!\n");
 			printf("Dentro do baú e do armário, existem itens que você pode pegar!!\n");
-			printf("Você quer sair do quarto?\n");
-			scanf("%s", sair);
+			printf("No baú há uma faca, quer pega-la? S/N\n");
+			scanf("%s", &pega);
+			if(pega == 'S'){
+				for(inventario[i]; i = 'faca'; i++){
+					printf("Faca foi adicionada ao seu inventário!\n");
+					break;
+				}
+				printf("O seu inventário é constituido por: %s", inventario);
+			}
+			
 		} else if (direcao == 'O'){
 			printf("\nEntrando na cozinha....\n");
 			printf("\nNeste ambiente você pode pegar alimentos e armas brancas!");
@@ -94,6 +102,12 @@ int main() {
 		} else if (direcao == 'S'){
 			printf("\nIndo para o portão....\n");
 			printf("\nVocê está saindo do castelo, pode escolher qual direção vai pegar:\n");
+			printf("\n1 - Leste (Vai para a montanha)\n2 - Oeste (Vai para o pântano)");
+			int ir = 0;
+			scanf("%d", &ir);
+			if(ir == 1){
+				printf("");
+			}
 		} else if(direcao == 'N'){
 			printf("\nVOLTANDO PARA O TEMPLO INICIAL....\n");
 		}
