@@ -84,10 +84,10 @@ int main() {
 			printf("\nEntrando no quarto....\n");
 			printf("\nObserve que este quarto possui, uma cama, um armário, um baú, uma janela com vista para o pátio e um espelho!\n");
 			printf("Dentro do baú e do armário, existem itens que você pode pegar!!\n");
-			printf("No baú há um escudo, quer pega-la? S/N\n");
+			printf("No baú há um escudo, quer pega-lo? S/N\n");
 			scanf("%s", &pega);
 			if(pega == 'S'){
-				for(inventario[i]; i = 'faca'; i++){
+				for(inventario[i]; i = 'escudo'; i++){
 					printf("O escudo foi adicionada ao seu inventário!\n");
 					break;
 				}
@@ -97,8 +97,15 @@ int main() {
 		} else if (direcao == 'O'){
 			printf("\nEntrando na cozinha....\n");
 			printf("\nNeste ambiente você pode pegar alimentos e armas brancas!");
-			printf("\nObserve que neste ambiente existem, uma pia, uma mesa de jantar, uma janela com vista para o pantano, uma geladeira e um fogão!");
-			
+			printf("\nVocê quer pegar a faca?S/N\n");
+			scanf("%s", &pega);
+			if(pega == 'S'){
+				for(inventario[i]; i = 'faca'; i++){
+					printf("A faca foi adicionada ao seu inventário!\n");
+					break;
+				}
+			}
+			printf("\nObserve também que neste ambiente existem, uma pia, uma mesa de jantar, uma janela com vista para o pantano, uma geladeira e um fogão!");
 		} else if (direcao == 'S'){
 			printf("\nIndo para o portão....\n");
 			printf("\nVocê está saindo do castelo, pode escolher qual direção vai pegar:\n");
@@ -106,7 +113,7 @@ int main() {
 			int ir = 0;
 			scanf("%d", &ir);
 			if(ir == 1){
-				printf("");
+				printf("Chegando na montanha!!!");
 			}
 		} else if(direcao == 'N'){
 			printf("\nVOLTANDO PARA O TEMPLO INICIAL....\n");
